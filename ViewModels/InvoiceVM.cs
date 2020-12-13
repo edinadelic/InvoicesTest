@@ -36,7 +36,6 @@ namespace InvoiceTestApp.ViewModels
         public double Units { get; set; }
      
         public double Amount { get; set; }
-        public double Tax { get; set; }
         public double Total { get; set; }
         [Required]
         public string Charge { get; set; }

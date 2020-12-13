@@ -64,12 +64,14 @@ namespace InvoiceTestApp.Data
             invoice.InvoiceDate = model.InvoiceDate;
             invoice.Rate = model.Rate;
             invoice.StartDate = model.StartDate;
+            invoice.Units = model.Units;
             invoice.EndDate = model.EndDate;
             invoice.Amount = model.Rate * model.Units;
             invoice.Tax = invoice.Amount * 0.17;
             invoice.Total = invoice.Tax * invoice.Amount;
             invoice.ChargeId = FindIdForCharge(model.Charge);
             invoice.ClientId = FindIdForClient(model.CompanyName);
+           
 
             _contex.Update(invoice);
             int changes = _contex.SaveChanges();
